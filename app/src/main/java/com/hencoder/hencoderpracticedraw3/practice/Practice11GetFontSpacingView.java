@@ -5,6 +5,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 public class Practice11GetFontSpacingView extends View {
@@ -35,9 +36,12 @@ public class Practice11GetFontSpacingView extends View {
         float spacing = 20;
 
         canvas.drawText(text, 50, 100, paint);
-
+        float spacing1 = paint.getFontSpacing();
         canvas.drawText(text, 50, 100 + spacing, paint);
+        float spacing2 = paint.getFontSpacing();
 
         canvas.drawText(text, 50, 100 + spacing * 2, paint);
+        float spacing3 = paint.getFontSpacing();
+        Log.i("getFontSpacing", spacing + " " + spacing1 + " " + spacing2 + " " + spacing3);
     }
 }
